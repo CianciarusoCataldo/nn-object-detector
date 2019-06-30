@@ -41,7 +41,7 @@ Then, move to the new directory:
 ```
 cd nn-object-detector
 ```
-Once you have a local copy, you are ready to start! Follow these steps to be sure everything will work fine at the end. This component of my project is a **Dispatcher Server** node, a webserver that will dispatch every request to the right dedicated server, so there are few dependencies (only the essential modules to make it work efficiently). 
+Once you have a local copy, you are ready to start! Follow these steps to be sure everything will work fine at the end. This component of my project is an **Object Detector** node, a webserver that will handle every request incoming and, if there is an image in the request, it will start the detection.  
 
 ### Prerequisites
 
@@ -93,7 +93,7 @@ Just open a terminal, move to "test" directory, and type:
 ```
 python send_request.py <image_path>
 ```
-If you want to send request by your own, just put an image in the HTTP POST request body, associated with an header, "image". The webserver is configured to read the image (in binary form) from the message using this custom header, so make sure to use it, or no request will be send.
+If you want to send request by your own, just put an image in the HTTP POST request body, associated with an header, "image". The webserver is configured to read the image (in binary form) from the message using this custom header, so make sure to use it, or no request will be processed.
 
 ## The response format
 The response from webserver follow a predefined pattern, designed to make the it readable but also short, to send less data and reduce overhead. The final response, the one that the user will read, has this form:
