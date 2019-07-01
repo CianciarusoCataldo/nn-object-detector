@@ -22,13 +22,13 @@
 
 ## Introduction
 NN Image Analyzer is a distributed system, powered by Neural Networks. You can easily analyze images to detect objects and faces. From detected faces, you can also retrieve information about gender, age and emotions. Due to his distributed nature, this projects is divided into multiple components. This is the main component, the **Object detector**. This component handle external requests, receiving image and analyze it to find objects. The user have to simply send a POST request to this webserver, and wait for result. That's it! You can run this application locally, alone or with the other nodes that compose the entire system. To make it modular as most, I designed every node to be independent, so you can easily use them separately in your projects. For every node, there is a dedicated repository:
-- [Main Server](https://github.com/CianciarusoCataldo/nn-image-analyzer)
+- [Main Server](https://github.com/CianciarusoCataldo/nn-dispatcher)
 - [Object Detector](https://github.com/CianciarusoCataldo/nn-object-detector)
 - [Face Detector](https://github.com/CianciarusoCataldo/nn-face-detector)
 
 I decided to not group all nodes under only one repository because every component of this system is independent from each other. This means that you can use the whole system or just one part, it's the same. The idea at the base of this project is to give to other user a tool to build a more complex system, not only to use it.
 
-## Technlogies
+## Technologies
 This project is written with **Python** programming language (**version 3.6.8**). It also use some external dependencies, that are listed into "requirements.txt" file for a fast setup. The Neural Network is based upon [ImageAi](https://github.com/OlafenwaMoses/ImageAI) project, adapted to support multiple request at once, using multithreading provided by Waitress webserver. My personal <a href="https://nn-image-analyzer.herokuapp.com">release</a> contains also a simple website, that I develope using **HTML**, **CSS** and **Javascript**, with also powerful extensions like **Bootstrap** and **Font awesome**, and many others. I decided to not include this website in the public release to let you use your personal website, if you have one.
 
 ## Getting Started
