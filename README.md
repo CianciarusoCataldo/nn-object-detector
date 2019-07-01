@@ -84,7 +84,7 @@ This will start the Waitress webserver, it will listen to 8082 port. Note that, 
 ```
 http://localhost:8082
 ```
-If everything is working, you will see the index file of the website, into static folder. By now, the webserver is able to handle both POST and GET requests. To start other nodes of the system, just follow their guide, which is the same as this, with obvious little difference (every node has its own startup script, to make it more immediate):
+If everything is working, you will see the index file of the website, into static folder. By now, the webserver is able to handle both POST and GET requests. To start other nodes of the system, just follow their guide, there are only obvious little differences (every node has its own startup script, to make it more immediate):
 - [Main Server](https://github.com/CianciarusoCataldo/nn-dispatcher)
 - [Face Detector](https://github.com/CianciarusoCataldo/nn-face-detector)
 
@@ -96,11 +96,11 @@ python send_request.py <image_path>
 If you want to send request by your own, just put an image in the HTTP POST request body, associated with an header, "image". The webserver is configured to read the image (in binary form) from the message using this custom header, so make sure to use it, or no request will be send.
 
 ## The response format
-The response from webserver follow a predefined pattern, designed to make the it readable but also short, to send less data and reduce overhead. The final response, the one that the user will read, has this form:
+The response from webserver follow a predefined pattern, designed to make it readable but also short, to send less data and reduce overhead. The final response, the one that the user will read, has this form:
 ```
 OBJ<Objects list>
 ```
-The < **Objects list** > contains all the objects detected. For every one of them, there are two attributes: name and coordinates. For example, here is a simple objects list:
+The < **Objects list** > contains all the objects detected. For every objects, there are two attributes: **name** and **coordinates**. For example, here is a simple objects list:
 ```
 OBJcar-109 1890 560 2300
 ```
