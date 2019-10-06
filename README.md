@@ -76,11 +76,11 @@ Before you start, let's see how this application works. It's designed to be modu
 - Fonts : put your font file here (.woff ecc.)
 
 ## Run
-Once you have installed all dependencies required, you can start the webserver simply using the startup script provided (.cmd for Windows system, .sh for Linux system). Otherwise, open terminal and type:
+Once you have installed all dependencies required, you can start the webserver simply using the startup script provided (start_server.py) that is os-independent. Otherwise, open terminal and type:
 ```
-waitress-serve --listen=0.0.0.0:8082 obj_detector:app
+python start_server.py
 ```
-This will start the Waitress webserver, it will listen to 8082 port. Note that, only at very first run, the program will download the required model for Neural Netowrk from a dedicated cloud storage. Don't worry, it's just a one-shot step, because the model will be permanently stored in "models" directory from here. I prefer to make every repository as small as possible, so the model files that are too big are not included. To To test it, just open your browser and type this in the address bar:
+This will start the Waitress webserver, it will listen to 8082 port by default (you can change this setting in config.ini file). Note that, only at very first run, the program will download the required model for Neural Netowrk from a dedicated cloud storage. Don't worry, it's just a one-shot step, because the model will be permanently stored in "models" directory from here. I prefer to make every repository as small as possible, so the model files that are too big are not included. To To test it, just open your browser and type this in the address bar:
 ```
 http://localhost:8082
 ```
