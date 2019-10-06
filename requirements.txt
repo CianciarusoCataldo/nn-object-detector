@@ -8,5 +8,5 @@ tensorflow==1.12.1
 numpy==1.16.1
 Keras==2.2.4
 Pillow==6.0.0
-scikit_learn==0.21.2
 configparser
+scikit_learn==0.21.2
